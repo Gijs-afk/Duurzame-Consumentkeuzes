@@ -82,6 +82,49 @@ namespace Duurzame_Consumentkeuzes.Data
                 UserId = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
             });
 
+            List<EnergyLabel> energyLabels = new List<EnergyLabel>
+            {
+                new EnergyLabel
+                {
+                    Id = 1,
+                    EfficiencyClass = "A",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 2,
+                    EfficiencyClass = "B",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 3,
+                    EfficiencyClass = "C",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 4,
+                    EfficiencyClass = "D",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 5,
+                    EfficiencyClass = "E",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 6,
+                    EfficiencyClass = "F",
+                }
+            };
+
+            foreach (EnergyLabel e in energyLabels)
+            {
+                modelBuilder.Entity<EnergyLabel>().HasData(e);
+            }
         }
     }
 }
