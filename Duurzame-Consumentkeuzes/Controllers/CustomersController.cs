@@ -33,7 +33,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
             }
 
             var customer = await _context.Users
-                .Include(c => c.Budget)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (customer == null)
@@ -57,7 +56,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
         [Authorize(Roles = "Administrators")]
         [HttpPost]
-        public async Task<IActionResult> Edit(string id, string email)
+        public async Task<IActionResult> Edit(string id, string email, decimal budget)
         {
             var customer = await userManager.FindByIdAsync(id);
             if (customer != null)
@@ -66,6 +65,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 {
                     customer.Email = email;
                     customer.UserName = email;
+                    customer.Budget = budget;
                 }
 
                 else
