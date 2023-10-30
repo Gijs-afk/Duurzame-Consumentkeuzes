@@ -1,0 +1,30 @@
+﻿@model Duurzame_Consumentkeuzes.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Profiel van @Html.DisplayFor(model => model.UserName)</h1>
+<a asp-action="Index">Terug naar klantenoverzicht</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Budget</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>
+            @Model.Email
+        </td>
+        @if (Model.Budget != null)
+        {
+            <td>@Model.Budget</td>
+        }
+        else
+        {
+            <td></td>
+        }
+    </tr>
+</table>
