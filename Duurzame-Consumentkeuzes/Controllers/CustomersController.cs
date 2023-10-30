@@ -65,11 +65,11 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 {
                     customer.Email = email;
                     customer.UserName = email;
-                    customer.Budget = budget;
                 }
-
                 else
                     ModelState.AddModelError("", "Email cannot be empty");
+
+                customer.Budget = budget;
 
                 if (!string.IsNullOrEmpty(email))
                 {

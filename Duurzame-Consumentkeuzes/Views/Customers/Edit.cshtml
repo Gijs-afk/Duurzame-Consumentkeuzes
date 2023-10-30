@@ -1,0 +1,43 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Modify Customer Information";
+}
+
+<h1>Klantgegevens wijzigen</h1>
+<a asp-action="Index">Terug naar klantenoverzicht</a>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="Edit" method="post">
+
+    <table>
+        <tr>
+            <div class="form-group">
+                <label asp-for="Id"></label>
+                <input asp-for="Id" class="form-control" disabled />
+            </div>
+        </tr>
+
+        <tr>
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" disabled />
+            </div>
+        </tr>
+
+        <tr>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+        </tr>
+
+        <tr>
+            <div class="form-group">
+                <label asp-for="Budget"></label>
+                <input asp-for="Budget" class="form-control" />
+            </div>
+        </tr>
+
+        <button type="submit">Save</button>
+    </table>
+</form>
