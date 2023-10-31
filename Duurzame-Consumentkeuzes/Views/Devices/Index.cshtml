@@ -10,12 +10,18 @@
         @foreach (var item in Model)
         {
             <td class="deviceItem">
-                <img src="@item.ImagePath" class="deviceImage">
-                <p>
-                    @item.Name <br />
-                    Energieklasse: @item.EnergyLabel.EfficiencyClass <br />
-                    Prijs: €@item.Price
-                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="@item.ImagePath" class="deviceImage">
+                        </td>
+                        <td>                          
+                            @item.Name <br />
+                            Energieklasse: @item.EnergyLabel.EfficiencyClass <br />
+                            Prijs: €@item.Price                           
+                        </td>
+                    </tr>
+                </table>                             
             </td>
         }
     </tr>
