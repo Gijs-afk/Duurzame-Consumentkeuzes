@@ -4,6 +4,31 @@
     ViewData["Title"] = "Index";
 }
 
+<h1>Apparaten</h1>
+<table>
+    <tr>
+        @foreach (var item in Model)
+        {
+            <td class="deviceItem">
+                <img src="@item.ImagePath" class="deviceImage">
+                <p>
+                    @item.Name <br />
+                    Energieklasse: @item.EnergyLabel.EfficiencyClass <br />
+                    Prijs: €@item.Price
+                </p>
+            </td>
+        }
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+@*
 <h1>Index</h1>
 
 <p>
@@ -22,10 +47,13 @@
                 @Html.DisplayNameFor(model => model.Type)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.BuildDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
+                @Html.DisplayNameFor(model => model.ImagePath)
             </th>
             <th></th>
         </tr>
@@ -43,10 +71,13 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.BuildDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Image.Id)
+                @Html.DisplayFor(modelItem => item.ImagePath)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
@@ -57,3 +88,4 @@
 }
     </tbody>
 </table>
+*@

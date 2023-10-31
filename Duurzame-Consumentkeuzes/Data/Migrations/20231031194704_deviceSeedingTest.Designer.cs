@@ -4,6 +4,7 @@ using Duurzame_Consumentkeuzes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Duurzame_Consumentkeuzes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231031194704_deviceSeedingTest")]
+    partial class deviceSeedingTest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,66 +127,66 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         {
                             Id = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "803b7b33-ed1a-4f7c-9a61-81e512e049a0",
+                            ConcurrencyStamp = "06c8f14b-4e07-43cf-b227-0fb376da5562",
                             Email = "admin@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELUgW+Dra1DAIBaU32DcZvRbFbLUzXLXqc5TGJPpyGQkmAa0SyxkSJaJw1oqtBoJVQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJYACR3ueILKurVQVnpXwsd/XOK3FWJVFlC2i5lFmMuaLDkVfS1oNc1EWBSVd7qU+A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "54c42f5f-648c-4920-b87b-b9680d610a0b",
+                            SecurityStamp = "52a1ff83-624e-40cc-aaa3-dba7d910095d",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
                         new
                         {
-                            Id = "7a699edf-efc1-4ce9-af58-fdefba844bee",
+                            Id = "3a4bf5a2-0f09-4783-b75b-b2dbe2358bdd",
                             AccessFailedCount = 0,
                             Budget = 450m,
-                            ConcurrencyStamp = "a19cc61d-e154-4d76-9edc-5743db26a64b",
+                            ConcurrencyStamp = "85aaf7a5-eba7-46f3-b506-4fa70cbc0ea3",
                             Email = "bruce@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "BRUCE@EXAMPLE.COM",
                             NormalizedUserName = "BRUCE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEN3RgbYo5W6CPmMC6DqumdidbLYrvtSXhPXwcKLbT2hWj0My+/sbsI1vi+vfneTR0w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECzX3ix1M1NjOUCPnXNdLkX9sIuHXEgzoA9fL32l2XFcneHmV9f8Jmg3JY+s/rj39w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "75cf51ba-d957-4fcd-ae7e-91a625eb756f",
+                            SecurityStamp = "0e0d2395-fa12-4f24-b069-927d73d3705d",
                             TwoFactorEnabled = false,
                             UserName = "bruce@example.com"
                         },
                         new
                         {
-                            Id = "ce367ccb-6d80-45f9-9794-8e62c847db22",
+                            Id = "70325f7b-f1d7-4fbe-bb40-745207766b65",
                             AccessFailedCount = 0,
                             Budget = 500m,
-                            ConcurrencyStamp = "98a21a34-c020-4ebf-900e-40552c9ec9c4",
+                            ConcurrencyStamp = "8864a1d0-6907-4149-91a6-8652bb630f06",
                             Email = "gijs@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "GIJS@EXAMPLE.COM",
                             NormalizedUserName = "GIJS@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEF2YgJ7ouWcXt25yXVc7Gb8Bo7CXp93ouwDBOlcnOa+JJsjpC0tdEr1IFHtEewLMbA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ46PTlfF5qnpCMio7pbsplHYM5QTDgqJVfHeXDjifuPZVA7l89Yg5Iqvbr1phwI1w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "30688064-546a-4ab4-a009-e4f22e73ef08",
+                            SecurityStamp = "63e0b462-82ca-44e4-8750-b9cd63b622ed",
                             TwoFactorEnabled = false,
                             UserName = "gijs@example.com"
                         },
                         new
                         {
-                            Id = "8e8c5c62-9f05-4878-a346-b3e8585ca15c",
+                            Id = "715fb72b-9983-4f4b-bf95-a04c15d403f8",
                             AccessFailedCount = 0,
                             Budget = 650m,
-                            ConcurrencyStamp = "24b7e3fe-05f4-40e8-9a36-ca19f4a7e7a9",
+                            ConcurrencyStamp = "b64aaeed-5b0e-41f4-8709-a6370679dd54",
                             Email = "rick@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "RICK@EXAMPLE.COM",
                             NormalizedUserName = "RICK@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAED4Wcyu6Eze9nPM/8EsT7cpqByUo2xt/eE9m+hVrk0cHyt6WO/yNDlMDxr7EFtRkSw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEE0lt85PwZ1/Qrs2sRvoaWqj8ykF4aOapdCwB2n7rLHTqvaTbzJa3TNqIAe3llKK1w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a15d5302-6997-4ce5-aba2-a703feb7f9fb",
+                            SecurityStamp = "7e9dfd03-44cf-4cdb-8e50-ba7968021038",
                             TwoFactorEnabled = false,
                             UserName = "rick@example.com"
                         });
@@ -230,7 +233,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 1,
                             Brand = "Haier",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/haier-hw90-b14959u1.png",
+                            ImagePath = "'/images/haier-hw90-b14959u1.png'",
                             Name = "Haier HW90 B14959U1",
                             Price = 599m,
                             Type = "Wasmachine"
@@ -240,7 +243,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 2,
                             Brand = "Samsung",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/samsung-ww90t534aaw.png",
+                            ImagePath = "'/images/samsung-ww90t534aaw.png'",
                             Name = "Samsung WW90T534AAW",
                             Price = 649m,
                             Type = "Wasmachine"
@@ -250,7 +253,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 3,
                             Brand = "Bosch",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/bosch-serie-4-wgg04409nl.png",
+                            ImagePath = "'/images/bosch-serie-4-wgg04409nl.png'",
                             Name = "Bosch Serie | 4 WGG04409NL",
                             Price = 699m,
                             Type = "Wasmachine"
@@ -489,11 +492,9 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
 
             modelBuilder.Entity("Duurzame_Consumentkeuzes.Models.Device", b =>
                 {
-                    b.HasOne("Duurzame_Consumentkeuzes.Models.EnergyLabel", "EnergyLabel")
+                    b.HasOne("Duurzame_Consumentkeuzes.Models.EnergyLabel", null)
                         .WithMany("Devices")
                         .HasForeignKey("EnergyLabelId");
-
-                    b.Navigation("EnergyLabel");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
