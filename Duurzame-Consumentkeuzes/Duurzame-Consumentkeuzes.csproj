@@ -30,10 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Logic\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\energylabels\" />
   </ItemGroup>
 
 </Project>

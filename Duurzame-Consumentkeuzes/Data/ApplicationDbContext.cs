@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Numerics;
+using System.Security.Policy;
 
 namespace Duurzame_Consumentkeuzes.Data
 {
@@ -10,7 +11,6 @@ namespace Duurzame_Consumentkeuzes.Data
     {
         public DbSet<Device> Devices { get; set; }
         public DbSet<EnergyLabel> EnergyLabels { get; set; }
-        public DbSet<Image> Images { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -29,6 +29,46 @@ namespace Duurzame_Consumentkeuzes.Data
                 NormalizedName = "ADMINISTRATORS",
                 Id = "e0f4adb4-8c3d-45ff-a814-62c3c873fba5",
             });
+
+            List<Device> devices = new List<Device>
+            {
+                new Device
+                {
+                    Id = 1,
+                    Name = "Haier HW90 B14959U1",
+                    Brand = "Haier",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 599,
+                    ImagePath = "/images/devices/haier-hw90-b14959u1.png",
+                },
+
+                new Device
+                {
+                    Id = 2,
+                    Name = "Samsung WW90T534AAW",
+                    Brand = "Samsung",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 649,
+                    ImagePath = "/images/devices/samsung-ww90t534aaw.png"
+                },
+
+                new Device
+                {
+                    Id = 3,
+                    Name = "Bosch Serie | 4 WGG04409NL",
+                    Brand = "Bosch",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 699,
+                    ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png"
+                },
+            };
+            foreach (var device in devices)
+            {
+                modelBuilder.Entity<Device>().HasData(device);
+            }
 
             List<Customer> customers = new List<Customer>
             {
@@ -88,37 +128,51 @@ namespace Duurzame_Consumentkeuzes.Data
                 {
                     Id = 1,
                     EfficiencyClass = "A",
+                    ImagePath = "/images/energylabels/energylabela.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 2,
                     EfficiencyClass = "B",
+                    ImagePath = "/images/energylabels/energylabelb.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 3,
                     EfficiencyClass = "C",
+                    ImagePath = "/images/energylabels/energylabelc.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 4,
                     EfficiencyClass = "D",
+                    ImagePath = "/images/energylabels/energylabeld.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 5,
                     EfficiencyClass = "E",
+                    ImagePath = "/images/energylabels/energylabele.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 6,
                     EfficiencyClass = "F",
-                }
+                    ImagePath = "/images/energylabels/energylabelf.png",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 7,
+                    EfficiencyClass = "G",
+                    ImagePath = "/images/energylabels/energylabelg.png",
+                },
+
             };
 
             foreach (EnergyLabel e in energyLabels)

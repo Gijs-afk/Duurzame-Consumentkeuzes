@@ -22,8 +22,11 @@ namespace Duurzame_Consumentkeuzes.Controllers
         // GET: Devices
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Devices.Include(d => d.Image);
-            return View(await applicationDbContext.ToListAsync());
+              return _context.Devices != null ? 
+                          View(await _context.Devices
+                          .Include(d => d.EnergyLabel)
+                          .ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.Devices'  is null.");
         }
 
         // GET: Devices/Details/5
@@ -35,7 +38,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
             }
 
             var device = await _context.Devices
-                .Include(d => d.Image)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (device == null)
             {
@@ -48,7 +50,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
         // GET: Devices/Create
         public IActionResult Create()
         {
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id");
             return View();
         }
 
@@ -57,7 +58,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Brand,Type,BuildDate,EnergyLabelId,ImageId")] Device device)
+        public async Task<IActionResult> Create([Bind("Id,Name,Brand,Type,Price,BuildDate,EnergyLabelId,ImagePath")] Device device)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +66,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", device.ImageId);
             return View(device);
         }
 
@@ -82,7 +82,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
             {
                 return NotFound();
             }
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", device.ImageId);
             return View(device);
         }
 
@@ -91,7 +90,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Brand,Type,BuildDate,EnergyLabelId,ImageId")] Device device)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Brand,Type,Price,BuildDate,EnergyLabelId,ImagePath")] Device device)
         {
             if (id != device.Id)
             {
@@ -118,7 +117,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", device.ImageId);
             return View(device);
         }
 
@@ -131,7 +129,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
             }
 
             var device = await _context.Devices
-                .Include(d => d.Image)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (device == null)
             {

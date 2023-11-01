@@ -4,6 +4,7 @@ using Duurzame_Consumentkeuzes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Duurzame_Consumentkeuzes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231031192541_RemovedImageModel")]
+    partial class RemovedImageModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,66 +127,66 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         {
                             Id = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c9913544-afa5-426f-9867-11a44df2c7e8",
+                            ConcurrencyStamp = "67802011-a03e-4aa0-91a0-d030b39e12b8",
                             Email = "admin@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEkeU884J+KLOQ9SdgNCZaObw/qyulCZ6w/av0lPnkLJnUvjE0yVpDiKSomgCckPVA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAXm+D9dR7XbqgYgZcvCB5SAhfBSSKMq/isY/yIwDXHa8dGwsbX1OnoGB8zh2AeYDQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d85c52f3-172d-4480-856c-dc4798d3f3ad",
+                            SecurityStamp = "0761a914-88b4-4558-9531-30042f522afa",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
                         new
                         {
-                            Id = "2ae37372-09e5-4438-b80c-8fecee945418",
+                            Id = "8d444423-6e84-4fab-94d2-873c8588257a",
                             AccessFailedCount = 0,
                             Budget = 450m,
-                            ConcurrencyStamp = "29f22ba7-aebf-44eb-85be-1aaeb6164d08",
+                            ConcurrencyStamp = "9b504dd0-177c-4a9e-ba9b-2efa591d25fd",
                             Email = "bruce@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "BRUCE@EXAMPLE.COM",
                             NormalizedUserName = "BRUCE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDtVTafb1RLhp9NnoFX53L3sTL9opY7DBPdpimJtnIoVWNPluC9tRmKvNgiuSDyhXg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDP1GsAAQ26S4smD1YdjG2lthw/fKfpAFJ7K9j29fg4s0Bld/orBL8A0z6dx3qPuuw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "61176701-37c1-41eb-b3b1-518c6dfde1fd",
+                            SecurityStamp = "acd87504-08a4-4eee-b325-f025a39bbc92",
                             TwoFactorEnabled = false,
                             UserName = "bruce@example.com"
                         },
                         new
                         {
-                            Id = "35598964-1502-4a0f-a5d0-4932be9512b8",
+                            Id = "a8570272-db34-4b83-8361-44b146d9b0a2",
                             AccessFailedCount = 0,
                             Budget = 500m,
-                            ConcurrencyStamp = "98a1a441-4c80-4179-bf75-fe9e0d440189",
+                            ConcurrencyStamp = "92c6f611-dddd-4a64-8ac6-836a7261da56",
                             Email = "gijs@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "GIJS@EXAMPLE.COM",
                             NormalizedUserName = "GIJS@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMEpYbrrQySgjJNqR3XvMVRteQtVEHXMndPVUXPcz8pt5a0uobgbk9O2JUr5URfRRw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBYLsEK05TcvBsKYKbBcVAUkWkpyZ4+SXLC7fPxsnKW+i0eL4bmSDoYG6ImMhrpOZQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1cb2812c-58b4-4c19-a7c2-99f194ab79d4",
+                            SecurityStamp = "a02eea27-a313-4925-81e9-f85fc5f8eb85",
                             TwoFactorEnabled = false,
                             UserName = "gijs@example.com"
                         },
                         new
                         {
-                            Id = "2ebd9892-beb4-497d-9d38-d3624f9ed659",
+                            Id = "4f1e2a54-97d9-416e-afcd-efa94672b90a",
                             AccessFailedCount = 0,
                             Budget = 650m,
-                            ConcurrencyStamp = "bdc3b5d4-8a04-4b59-8479-50cddedc38a5",
+                            ConcurrencyStamp = "4c40c4bc-4dc8-45ea-ad80-ed16d61bbf34",
                             Email = "rick@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "RICK@EXAMPLE.COM",
                             NormalizedUserName = "RICK@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHqoZ8qOZpsozTyh0S2qlM19Lh73WnyMVVH+W7F9INeUN0/YfjAwhqjRM/Ol30CBPg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEANyNgKzQaLftisiSsEaXY2srCWbcayI4z6iQXrzhFqPPEXtCdAuoqWSw2x+nhdcnA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a4164e6f-dd79-4fd3-9f2c-e41e0d8d3937",
+                            SecurityStamp = "fd2191e9-d0fb-4f89-b022-1ab2cfa40537",
                             TwoFactorEnabled = false,
                             UserName = "rick@example.com"
                         });
@@ -223,38 +226,6 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                     b.HasIndex("EnergyLabelId");
 
                     b.ToTable("Devices");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand = "Haier",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/haier-hw90-b14959u1.png",
-                            Name = "Haier HW90 B14959U1",
-                            Price = 599m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Brand = "Samsung",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/samsung-ww90t534aaw.png",
-                            Name = "Samsung WW90T534AAW",
-                            Price = 649m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Brand = "Bosch",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png",
-                            Name = "Bosch Serie | 4 WGG04409NL",
-                            Price = 699m,
-                            Type = "Wasmachine"
-                        });
                 });
 
             modelBuilder.Entity("Duurzame_Consumentkeuzes.Models.EnergyLabel", b =>
@@ -268,9 +239,6 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                     b.Property<string>("EfficiencyClass")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("EnergyLabels");
@@ -279,44 +247,32 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         new
                         {
                             Id = 1,
-                            EfficiencyClass = "A",
-                            ImagePath = "/images/energylabels/energylabela.png"
+                            EfficiencyClass = "A"
                         },
                         new
                         {
                             Id = 2,
-                            EfficiencyClass = "B",
-                            ImagePath = "/images/energylabels/energylabelb.png"
+                            EfficiencyClass = "B"
                         },
                         new
                         {
                             Id = 3,
-                            EfficiencyClass = "C",
-                            ImagePath = "/images/energylabels/energylabelc.png"
+                            EfficiencyClass = "C"
                         },
                         new
                         {
                             Id = 4,
-                            EfficiencyClass = "D",
-                            ImagePath = "/images/energylabels/energylabeld.png"
+                            EfficiencyClass = "D"
                         },
                         new
                         {
                             Id = 5,
-                            EfficiencyClass = "E",
-                            ImagePath = "/images/energylabels/energylabele.png"
+                            EfficiencyClass = "E"
                         },
                         new
                         {
                             Id = 6,
-                            EfficiencyClass = "F",
-                            ImagePath = "/images/energylabels/energylabelf.png"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            EfficiencyClass = "G",
-                            ImagePath = "/images/energylabels/energylabelg.png"
+                            EfficiencyClass = "F"
                         });
                 });
 
@@ -504,11 +460,9 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
 
             modelBuilder.Entity("Duurzame_Consumentkeuzes.Models.Device", b =>
                 {
-                    b.HasOne("Duurzame_Consumentkeuzes.Models.EnergyLabel", "EnergyLabel")
+                    b.HasOne("Duurzame_Consumentkeuzes.Models.EnergyLabel", null)
                         .WithMany("Devices")
                         .HasForeignKey("EnergyLabelId");
-
-                    b.Navigation("EnergyLabel");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

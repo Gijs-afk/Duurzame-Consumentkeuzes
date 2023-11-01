@@ -28,6 +28,11 @@
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="BuildDate" class="control-label"></label>
                 <input asp-for="BuildDate" class="form-control" />
                 <span asp-validation-for="BuildDate" class="text-danger"></span>
@@ -37,8 +42,9 @@
                 <select asp-for="EnergyLabelId" class ="form-control" asp-items="ViewBag.EnergyLabelId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="ImageId" class="control-label"></label>
-                <select asp-for="ImageId" class ="form-control" asp-items="ViewBag.ImageId"></select>
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
