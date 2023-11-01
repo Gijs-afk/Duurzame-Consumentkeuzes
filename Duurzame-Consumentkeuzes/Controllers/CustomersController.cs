@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Numerics;
 using System.Runtime.Intrinsics.X86;
+using Duurzame_Consumentkeuzes.Exceptions;
 
 namespace Duurzame_Consumentkeuzes.Controllers
 {
@@ -18,12 +19,34 @@ namespace Duurzame_Consumentkeuzes.Controllers
             _context = context;
             this.userManager = userManager;
         }
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            var customers = await _context.Users
-                .ToListAsync();
+            var currentUser = await userManager.GetUserAsync(User);
 
-            return View(customers);
+            if (currentUser != null)
+            {
+                bool isAdministrator = await userManager.IsInRoleAsync(currentUser, "Administrators");
+
+                if (isAdministrator)
+                {
+                    var customers = await _context.Users
+                                    .ToListAsync();
+
+                    return View(customers);
+                }
+                else
+                {
+                    return RedirectToAction("Details", new { id = currentUser.Id });
+                }
+            }
+            else
+            {
+                throw new NotFoundException("Gebruiker niet gevonden.");
+            }
+
+
+ 
         }
         public async Task<IActionResult> Details(string? id)
         {
