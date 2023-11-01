@@ -48,6 +48,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
  
         }
+        [Authorize]
         public async Task<IActionResult> Details(string? id)
         {
             if (id == null || _context.Users == null)
@@ -57,32 +58,58 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
             var customer = await _context.Users
                 .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (customer == null)
+            var currentUser = await userManager.GetUserAsync(User);
+            bool isAdministrator = await userManager.IsInRoleAsync(currentUser, "Administrators");
+            if (isAdministrator || currentUser.Id == id)
             {
-                return NotFound();
+                return View(customer);
             }
-
-            return View(customer);
+            else
+            {
+                return RedirectToAction("Details", new { id = currentUser.Id });
+            }
         }
 
-        [Authorize(Roles = "Administrators")]
+        [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
             var customer = await userManager.FindByIdAsync(id);
+            var currentUser = await userManager.GetUserAsync(User);
 
-            if (customer != null)
-                return View(customer);
+            if (currentUser != null && customer != null)
+            {
+                bool isAdministrator = await userManager.IsInRoleAsync(currentUser, "Administrators");
+
+                if (isAdministrator || currentUser.Id == id)
+                {                   
+                    return View(customer);
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
+            }
             else
-                return RedirectToAction("Index");
+            {
+                throw new NotFoundException("Gebruiker niet gevonden.");
+            }
         }
 
-        [Authorize(Roles = "Administrators")]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Edit(string id, string email, decimal budget)
         {
             var customer = await userManager.FindByIdAsync(id);
-            if (customer != null)
+            var currentUser = await userManager.GetUserAsync(User);
+            bool isAdministrator = await userManager.IsInRoleAsync(currentUser, "Administrators");
+
+            if (customer == null | currentUser == null)
+            {                     
+                ModelState.AddModelError("", "User Not Found");
+                throw new BadRequestException("User not found");
+            }
+
+            if (customer.Id == currentUser.Id || isAdministrator == true)
             {
                 if (!string.IsNullOrEmpty(email))
                 {
@@ -98,14 +125,16 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 {
                     IdentityResult result = await userManager.UpdateAsync(customer);
                     if (result.Succeeded)
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Details", new { id = currentUser.Id });
                     else
                         Errors(result);
                 }
+
+
+
+                return View(customer);
             }
-            else
-                ModelState.AddModelError("", "User Not Found");
-            return View(customer);
+            return RedirectToAction("Details", new { id = currentUser.Id });
         }
 
         private void Errors(IdentityResult result)
