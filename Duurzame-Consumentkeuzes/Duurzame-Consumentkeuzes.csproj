@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Logic\" />
+    <Folder Include="wwwroot\images\energylabels\" />
   </ItemGroup>
 
 </Project>

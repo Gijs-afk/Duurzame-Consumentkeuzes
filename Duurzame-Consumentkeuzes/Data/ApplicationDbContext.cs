@@ -40,7 +40,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 599,
-                    ImagePath = "/images/haier-hw90-b14959u1.png",
+                    ImagePath = "/images/devices/haier-hw90-b14959u1.png",
                 },
 
                 new Device
@@ -51,7 +51,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 649,
-                    ImagePath = "/images/samsung-ww90t534aaw.png"
+                    ImagePath = "/images/devices/samsung-ww90t534aaw.png"
                 },
 
                 new Device
@@ -62,7 +62,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 699,
-                    ImagePath = "/images/bosch-serie-4-wgg04409nl.png"
+                    ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png"
                 },
             };
             foreach (var device in devices)
@@ -128,37 +128,51 @@ namespace Duurzame_Consumentkeuzes.Data
                 {
                     Id = 1,
                     EfficiencyClass = "A",
+                    ImagePath = "/images/energylabels/energylabela.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 2,
                     EfficiencyClass = "B",
+                    ImagePath = "/images/energylabels/energylabelb.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 3,
                     EfficiencyClass = "C",
+                    ImagePath = "/images/energylabels/energylabelc.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 4,
                     EfficiencyClass = "D",
+                    ImagePath = "/images/energylabels/energylabeld.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 5,
                     EfficiencyClass = "E",
+                    ImagePath = "/images/energylabels/energylabele.png",
                 },
 
                 new EnergyLabel
                 {
                     Id = 6,
                     EfficiencyClass = "F",
-                }
+                    ImagePath = "/images/energylabels/energylabelf.png",
+                },
+
+                new EnergyLabel
+                {
+                    Id = 7,
+                    EfficiencyClass = "G",
+                    ImagePath = "/images/energylabels/energylabelg.png",
+                },
+
             };
 
             foreach (EnergyLabel e in energyLabels)
