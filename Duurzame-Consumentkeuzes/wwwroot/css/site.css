@@ -31,7 +31,42 @@ body {
     width: 400px;
     height: 125px;
 }
+
 .custom-btn {
     display: inline-block;
     margin-right: 10px; 
 }
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin: 8px; 
+}
+
+.image {
+    width: 100%; /* Hiermee zorg je ervoor dat de afbeelding 100% breedte van de container heeft */
+    height: 35%; /* Hiermee wordt de hoogte proportioneel aangepast aan de breedte */
+}
+
+.button1 {
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Voeg een overgangseffect toe op de achtergrondkleur */
+}
+
+    .button1:hover {
+        background-color: #689f38; /* Donkerder groen bij hover voor interactie */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Voeg een lichte schaduw toe bij hover */
+    }
+
