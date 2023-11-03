@@ -32,6 +32,12 @@ body {
     height: 125px;
 }
 
+.custom-btn {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -63,3 +69,4 @@ body {
         background-color: #689f38; /* Donkerder groen bij hover voor interactie */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Voeg een lichte schaduw toe bij hover */
     }
+
