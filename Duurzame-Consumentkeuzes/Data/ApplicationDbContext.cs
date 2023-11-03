@@ -40,7 +40,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 599,
-                    ImagePath = "/images/devices/haier-hw90-b14959u1.png",
+                    ImagePath = "/images/devices/wasmachines/haier-hw90-b14959u1.png",
                 },
 
                 new Device
@@ -51,7 +51,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 649,
-                    ImagePath = "/images/devices/samsung-ww90t534aaw.png"
+                    ImagePath = "/images/devices/wasmachines/samsung-ww90t534aaw.png"
                 },
 
                 new Device
@@ -62,9 +62,90 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 699,
-                    ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png"
+                    ImagePath = "/images/devices/wasmachines/bosch-serie-4-wgg04409nl.png"
                 },
+
+                new Device
+                {
+                    Id = 4,
+                    Name = "AEG LR6BERLIN",
+                    Brand = "AEG",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 649,
+                    ImagePath = "/images/devices/wasmachines/aeg-lr6berlin.png"
+                },
+
+                new Device
+                {
+                    Id = 5,
+                    Name = "Siemens IQ700 WG56B2A5NL",
+                    Brand = "Siemens",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 1099,
+                    ImagePath = "/images/devices/wasmachines/siemens-iq700-wg56b2a5nl.png"
+                },
+
+                new Device
+                {
+                    Id = 6,
+                    Name = "Bosch Serie | 6 WAU28P95NL",
+                    Brand = "Bosch",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 875,
+                    ImagePath = "/images/devices/wasmachines/bosch-serie-6-wau28p95nl.png"
+                },
+
+                new Device
+                {
+                    Id = 7,
+                    Name = "Siemens IQ300 WM14N297NL",
+                    Brand = "Siemens",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 779,
+                    ImagePath = "/images/devices/wasmachines/siemens-iq300-wm14n297nl.png"
+                },
+                
+                new Device
+                {
+                    Id = 8,
+                    Name = "Beko WTV8712BLW1",
+                    Brand = "Beko",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 3,
+                    Price = 399,
+                    ImagePath = "/images/devices/wasmachines/beko-wtv8712blw1.png"
+                },
+
+                new Device
+                {
+                    Id = 9,
+                    Name = "Whirlpool FFB 9458 WV BE",
+                    Brand = "Whirlpool",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 2,
+                    Price = 403,
+                    ImagePath = "/images/devices/wasmachines/whirlpool-ffb-9458-wv-be.png"
+                },
+
+                new Device
+                {
+                    Id = 10,
+                    Name = "Beko WTV8711BC1",
+                    Brand = "Beko",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 3,
+                    Price = 429,
+                    ImagePath = "/images/devices/wasmachines/beko-wtv8711bc1.png"
+                },
+
+
+
             };
+
             foreach (var device in devices)
             {
                 modelBuilder.Entity<Device>().HasData(device);

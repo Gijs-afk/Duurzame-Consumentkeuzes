@@ -4,6 +4,7 @@ using Duurzame_Consumentkeuzes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Duurzame_Consumentkeuzes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231103093801_WasmachinesSeeding")]
+    partial class WasmachinesSeeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,66 +127,66 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         {
                             Id = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5d134689-8f2b-4952-a4a5-371c4049dd98",
+                            ConcurrencyStamp = "10fc573e-3ecb-4fca-a0cd-bdfe2e3cf67c",
                             Email = "admin@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ4l96OPeoBFHDL3DZCkXqxj8br683A4a7Pl6rT9fHVHqDsv66u4rr8ctQf8tgHQEg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIDd+sp5DNPXmAytvQIM2xiyy0ya4vVJcTQsXxLAZC5BMfuKl6f/fPArQDVdvYHnSA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "55c0846a-a14b-4912-b2fd-670812c84023",
+                            SecurityStamp = "f01ce7f7-38c2-4bca-8c62-5a9c79d592d3",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
                         new
                         {
-                            Id = "16a3c71a-4799-4807-9d81-83d686e53426",
+                            Id = "43bd69a6-0cfa-4e31-98b7-6e302af4a071",
                             AccessFailedCount = 0,
                             Budget = 450m,
-                            ConcurrencyStamp = "6427e2b6-8de4-4001-a72a-902435f4c852",
+                            ConcurrencyStamp = "30708a3b-150c-4400-b91e-35599a45ed40",
                             Email = "bruce@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "BRUCE@EXAMPLE.COM",
                             NormalizedUserName = "BRUCE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEG0O8VhVgBdbAA6KB0TwTUlqnZkIwK5sHBtZBgvxNbeVHBu8N8bMPjjbfZGyxy+rUw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEP4k3sns5xBZq70OUdKBKAb+/aCreHDJDNzswy52vb5NamqiqwUyLl/9scmZ+POzrQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ba417626-951b-4662-a024-bf03fcb1a82d",
+                            SecurityStamp = "b8c5c99c-0fc0-4ddc-a0fd-f26f70bfaa47",
                             TwoFactorEnabled = false,
                             UserName = "bruce@example.com"
                         },
                         new
                         {
-                            Id = "c4c3d565-22bd-4a89-ae32-fd7356c4bb0b",
+                            Id = "12755b00-505b-47c3-9332-8fe19a0d314a",
                             AccessFailedCount = 0,
                             Budget = 500m,
-                            ConcurrencyStamp = "9e703f9e-7aff-47fe-b91c-b03d6413b1b8",
+                            ConcurrencyStamp = "fa217d44-50ea-4411-84f3-09447bd83b18",
                             Email = "gijs@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "GIJS@EXAMPLE.COM",
                             NormalizedUserName = "GIJS@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIciFfUH/VwSTJHtpCSvlTqu90xLbUQDpy2lug0BJZSBmuJewUxYK5wXamxP3ml9XQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ7V47Pu2983t2qjcUFVIh1jKXl1rUGcKzRmYsH9QeGUU7loYx+G39ajO4r+TB9mKg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2a096476-0b30-4ae5-8ea0-88a7ff1c92c1",
+                            SecurityStamp = "02aa0e7d-740b-4f12-894e-4d5024d6c431",
                             TwoFactorEnabled = false,
                             UserName = "gijs@example.com"
                         },
                         new
                         {
-                            Id = "604bb1d1-5a86-476b-b6df-f81c3322753a",
+                            Id = "e0a745ac-2deb-4a12-a136-0d72c5a42b0d",
                             AccessFailedCount = 0,
                             Budget = 650m,
-                            ConcurrencyStamp = "f366c887-aba1-46ba-8da0-6f3542ccd009",
+                            ConcurrencyStamp = "f3664782-16c7-4f11-ac0a-72aea5c8a789",
                             Email = "rick@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "RICK@EXAMPLE.COM",
                             NormalizedUserName = "RICK@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ8K4jBLr81d9vexrEd76W6Qsmhek8cRKIrRjUEFAh9/PuqgFK862/ms9BLPZRSLQw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAQcN5pObxqw9YT7HJ8+W5LoDphFKMzFdVqBjqcICvKX9/pMhp00Q3f1EoabWyPaMw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "33db3ecc-8d47-41b4-9772-878bc2dc58f1",
+                            SecurityStamp = "199e6ba1-e1ce-4487-a1bc-f6372645e447",
                             TwoFactorEnabled = false,
                             UserName = "rick@example.com"
                         });
@@ -230,7 +233,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 1,
                             Brand = "Haier",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/haier-hw90-b14959u1.png",
+                            ImagePath = "/images/devices/haier-hw90-b14959u1.png",
                             Name = "Haier HW90 B14959U1",
                             Price = 599m,
                             Type = "Wasmachine"
@@ -240,7 +243,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 2,
                             Brand = "Samsung",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/samsung-ww90t534aaw.png",
+                            ImagePath = "/images/devices/samsung-ww90t534aaw.png",
                             Name = "Samsung WW90T534AAW",
                             Price = 649m,
                             Type = "Wasmachine"
@@ -250,7 +253,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 3,
                             Brand = "Bosch",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/bosch-serie-4-wgg04409nl.png",
+                            ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png",
                             Name = "Bosch Serie | 4 WGG04409NL",
                             Price = 699m,
                             Type = "Wasmachine"
@@ -260,7 +263,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 4,
                             Brand = "AEG",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/aeg-lr6berlin.png",
+                            ImagePath = "/images/devices/aeg-lr6berlin.png",
                             Name = "AEG LR6BERLIN",
                             Price = 649m,
                             Type = "Wasmachine"
@@ -270,7 +273,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 5,
                             Brand = "Siemens",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/siemens-iq700-wg56b2a5nl.png",
+                            ImagePath = "/images/devices/siemens-iq700-wg56b2a5nl.png",
                             Name = "Siemens IQ700 WG56B2A5NL",
                             Price = 1099m,
                             Type = "Wasmachine"
@@ -280,7 +283,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 6,
                             Brand = "Bosch",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/bosch-serie-6-wau28p95nl.png",
+                            ImagePath = "/images/devices/bosch-serie-6-wau28p95nl.png",
                             Name = "Bosch Serie | 6 WAU28P95NL",
                             Price = 875m,
                             Type = "Wasmachine"
@@ -290,39 +293,9 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 7,
                             Brand = "Siemens",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/siemens-iq300-wm14n297nl.png",
+                            ImagePath = "/images/devices/siemens-iq300-wm14n297nl.png",
                             Name = "Siemens IQ300 WM14N297NL",
                             Price = 779m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Brand = "Beko",
-                            EnergyLabelId = 3,
-                            ImagePath = "/images/devices/wasmachines/beko-wtv8712blw1.png",
-                            Name = "Beko WTV8712BLW1",
-                            Price = 399m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Brand = "Whirlpool",
-                            EnergyLabelId = 2,
-                            ImagePath = "/images/devices/wasmachines/whirlpool-ffb-9458-wv-be.png",
-                            Name = "Whirlpool FFB 9458 WV BE",
-                            Price = 403m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Brand = "Beko",
-                            EnergyLabelId = 3,
-                            ImagePath = "/images/devices/wasmachines/beko-wtv8711bc1.png",
-                            Name = "Beko WTV8711BC1",
-                            Price = 429m,
                             Type = "Wasmachine"
                         });
                 });
