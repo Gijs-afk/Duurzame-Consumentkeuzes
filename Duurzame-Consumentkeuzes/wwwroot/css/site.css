@@ -31,3 +31,7 @@ body {
     width: 400px;
     height: 125px;
 }
+.custom-btn {
+    display: inline-block;
+    margin-right: 10px; 
+}
