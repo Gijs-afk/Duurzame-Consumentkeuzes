@@ -45,8 +45,8 @@ body {
 }
 
 .image {
-    width: 100%; /* Hiermee zorg je ervoor dat de afbeelding 100% breedte van de container heeft */
-    height: 35%; /* Hiermee wordt de hoogte proportioneel aangepast aan de breedte */
+    width: 100%; 
+    height: 35%; 
 }
 
 .button1 {
@@ -56,10 +56,10 @@ body {
     font-size: 24px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s; /* Voeg een overgangseffect toe op de achtergrondkleur */
+    transition: background-color 0.3s; 
 }
 
     .button1:hover {
-        background-color: #689f38; /* Donkerder groen bij hover voor interactie */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Voeg een lichte schaduw toe bij hover */
+        background-color: #689f38; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     }
