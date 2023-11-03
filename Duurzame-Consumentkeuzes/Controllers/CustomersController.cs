@@ -87,7 +87,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Edit(string id, string email, decimal budget)
+        public async Task<IActionResult> Edit(string id, string email, decimal? budget)
         {
             var customer = await userManager.FindByIdAsync(id);
             var currentUser = await userManager.GetUserAsync(User);
@@ -101,14 +101,18 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
             if (customer.Id == currentUser.Id || isAdministrator)
             {
-                if (!string.IsNullOrEmpty(email))
+                if (!string.IsNullOrEmpty(email) )
                 {
                     customer.Email = email;
                     customer.UserName = email;
+
                 }
                 // else { ModelState.AddModelError("", "Email cannot be empty"); }
-                    
-                customer.Budget = budget;
+
+                if (budget.HasValue)
+                {
+                    customer.Budget = budget;
+                }       
 
                 if (!string.IsNullOrEmpty(email))
                 {
@@ -125,6 +129,24 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 return View(customer);
             }
             return RedirectToAction("Details", new { id = currentUser.Id });
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> DeleteBudget(string id, string email)
+        {
+            var currentUser = await userManager.GetUserAsync(User);
+            if (currentUser == null) { throw new NotFoundException("User not found"); }
+            if ( currentUser.Id == id)
+            {
+                currentUser.Budget = null;
+                await userManager.UpdateAsync(currentUser);
+
+                return RedirectToAction("Details", new { id = currentUser.Id });
+            }
+            ModelState.AddModelError("", "Id did not match User's ID");
+            throw new BadRequestException("Id did not match user id");
+
         }
 
         private void Errors(IdentityResult result)
