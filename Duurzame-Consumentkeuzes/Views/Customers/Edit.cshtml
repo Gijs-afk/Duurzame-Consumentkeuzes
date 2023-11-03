@@ -3,41 +3,19 @@
     ViewData["Title"] = "Modify Customer Information";
 }
 
-<h1>Budget wijzigen</h1>
-<a asp-action="Index">Terug naar klantenoverzicht</a>
-<div asp-validation-summary="All" class="text-danger"></div>
 
-<form asp-action="Edit" method="post">
+@if (ViewBag.EditMode == "Budget")
+{
+    <div id="budget-edit">
+        @Html.Partial("_PartialEditBudget", Model)
+    </div>
+}
 
-    <table>
-        <tr>
-            <div class="form-group">
-                <label asp-for="Id"></label>
-                <input type="hidden" asp-for="Id" class="form-control" disabled />
-            </div>
-        </tr>
+@if (ViewBag.EditMode == "Email")
+{
+    <div id="email-edit">
+        @Html.Partial("_PartialEditEmail", Model)
+    </div>
+}
 
-        <tr>
-            <div class="form-group">
-                <label asp-for="UserName"></label>
-                <input type="hidden" asp-for="UserName" class="form-control" disabled />
-            </div>
-        </tr>
 
-        <tr>
-            <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
-            </div>
-        </tr>
-
-        <tr>
-            <div class="form-group">
-                <label asp-for="Budget"></label>
-                <input type="hidden" asp-for="Budget" class="form-control" disabled />
-            </div>
-        </tr>
-
-        <button type="submit">Save</button>
-    </table>
-</form>
