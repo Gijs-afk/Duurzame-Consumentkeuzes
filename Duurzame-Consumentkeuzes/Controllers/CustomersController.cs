@@ -30,44 +30,36 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
                 if (isAdministrator)
                 {
-                    var customers = await _context.Users
-                                    .ToListAsync();
-
+                    var customers = await _context.Users.ToListAsync();
                     return View(customers);
                 }
-                else
-                {
-                    return RedirectToAction("Details", new { id = currentUser.Id });
-                }
-            }
-            else
-            {
-                throw new NotFoundException("Gebruiker niet gevonden.");
+
+                return RedirectToAction("Details", new { id = currentUser.Id });
             }
 
-
- 
+            throw new NotFoundException("Gebruiker niet gevonden.");
         }
+
         [Authorize]
         public async Task<IActionResult> Details(string? id)
         {
             if (id == null || _context.Users == null)
             {
-                return NotFound();
+                throw new NotFoundException("User not found");
             }
 
             var customer = await _context.Users
                 .FirstOrDefaultAsync(c => c.Id == id);
             var currentUser = await userManager.GetUserAsync(User);
             bool isAdministrator = await userManager.IsInRoleAsync(currentUser, "Administrators");
+
             if (isAdministrator || currentUser.Id == id)
             {
                 return View(customer);
             }
-            else
-            {
-                return RedirectToAction("Details", new { id = currentUser.Id });
-            }
+
+            return RedirectToAction("Details", new { id = currentUser.Id });
+
         }
 
         [Authorize]
@@ -84,15 +76,13 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 {                   
                     return View(customer);
                 }
-                else
-                {
-                    return RedirectToAction("Index");
-                }
+                
+                return RedirectToAction("Index");
+                
             }
-            else
-            {
-                throw new NotFoundException("Gebruiker niet gevonden.");
-            }
+            
+            throw new NotFoundException("Gebruiker niet gevonden.");
+            
         }
 
         [Authorize]
@@ -109,28 +99,28 @@ namespace Duurzame_Consumentkeuzes.Controllers
                 throw new BadRequestException("User not found");
             }
 
-            if (customer.Id == currentUser.Id || isAdministrator == true)
+            if (customer.Id == currentUser.Id || isAdministrator)
             {
                 if (!string.IsNullOrEmpty(email))
                 {
                     customer.Email = email;
                     customer.UserName = email;
                 }
-                else
-                    ModelState.AddModelError("", "Email cannot be empty");
-
+                // else { ModelState.AddModelError("", "Email cannot be empty"); }
+                    
                 customer.Budget = budget;
 
                 if (!string.IsNullOrEmpty(email))
                 {
                     IdentityResult result = await userManager.UpdateAsync(customer);
                     if (result.Succeeded)
+                    {
                         return RedirectToAction("Details", new { id = currentUser.Id });
-                    else
-                        Errors(result);
+                    }
+
+                    Errors(result);
+
                 }
-
-
 
                 return View(customer);
             }
@@ -180,8 +170,8 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
                     return RedirectToAction(nameof(Index));
 
-                else
-                    Errors(result);
+                
+               Errors(result);
             }
             return View("Index", userManager.Users);
         }
