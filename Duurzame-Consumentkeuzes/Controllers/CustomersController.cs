@@ -63,10 +63,20 @@ namespace Duurzame_Consumentkeuzes.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string id, bool isEditingBudget, bool isEditingEmail)
         {
             var customer = await userManager.FindByIdAsync(id);
             var currentUser = await userManager.GetUserAsync(User);
+
+            if (isEditingBudget)
+            {
+                ViewBag.EditMode = "Budget";
+            }
+            else if (isEditingEmail)
+            {
+                ViewBag.EditMode = "Email";
+            }
+            else { return RedirectToAction("Details", new { id = currentUser.Id }); }
 
             if (currentUser != null && customer != null)
             {
