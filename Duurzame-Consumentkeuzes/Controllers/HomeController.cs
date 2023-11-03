@@ -23,7 +23,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult OverOns()
         {
             return View();
         }
