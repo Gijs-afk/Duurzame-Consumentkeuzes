@@ -50,18 +50,6 @@ namespace Duurzame_Consumentkeuzes.Controllers
             return View(filteredDevices);
         }
 
-
-
-        //GET: Devices
-        //public async Task<IActionResult> Index()
-        //{
-        //    return _context.Devices != null ?
-        //                View(await _context.Devices
-        //                .Include(d => d.EnergyLabel)
-        //                .ToListAsync()) :
-        //                Problem("Entity set 'ApplicationDbContext.Devices'  is null.");
-        //}
-
         // GET: Devices/Details/5
         public async Task<IActionResult> Details(int? id)
         {
