@@ -149,7 +149,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Brand = "Bosch",
                     Type = "Koelkast",
                     EnergyLabelId = 1,
-                    Price = 41.60M,
+                    Price = 1249,
                     ImagePath = "/images/devices/koelkasten/bosch-serie-6-kgn39aiat.png"
                 },
 
@@ -160,7 +160,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Brand = "Siemens",
                     Type = "Koelkast",
                     EnergyLabelId = 2,
-                    Price = 47.60M,
+                    Price = 839,
                     ImagePath = "/images/devices/koelkasten/siemens-kg39e8xba.png"
                 },
 
@@ -195,6 +195,61 @@ namespace Duurzame_Consumentkeuzes.Data
                     EnergyLabelId = 1,
                     Price = 1399,
                     ImagePath = "/images/devices/koelkasten/siemens-iq500-kg39naiat.png"
+                },
+
+                new Device
+                {
+                    Id = 16,
+                    Name = "Etna KKS4088",
+                    Brand = "Etna",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 348,
+                    ImagePath = "/images/devices/koelkasten/etna-kks4088.png"
+                },
+
+                new Device
+                {
+                    Id = 17,
+                    Name = "Siemens KU15RAFF0",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 576,
+                    ImagePath = "/images/devices/koelkasten/siemens-ku15raff0.png"
+                },
+
+                new Device
+                {
+                    Id = 18,
+                    Name = "Siemens KI51FADE0",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 893.36M,
+                    ImagePath = "/images/devices/koelkasten/siemens-ki51fade0.png"
+                },
+
+                new Device
+                {
+                    Id = 19,
+                    Name = "Etna KKD4122 ",
+                    Brand = "Etna",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 499,
+                    ImagePath = "/images/devices/koelkasten/etna-kkd4122.png"
+                },
+
+                new Device
+                {
+                    Id = 20,
+                    Name = "Bosch KSV33VLEP",
+                    Brand = "Bosch",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 719,
+                    ImagePath = "/images/devices/koelkasten/bosch-ksv33vlep.png"
                 },
             };
 
