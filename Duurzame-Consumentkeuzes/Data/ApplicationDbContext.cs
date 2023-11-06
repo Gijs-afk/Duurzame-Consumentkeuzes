@@ -251,6 +251,28 @@ namespace Duurzame_Consumentkeuzes.Data
                     Price = 719,
                     ImagePath = "/images/devices/koelkasten/bosch-ksv33vlep.png"
                 },
+
+                new Device
+                {
+                    Id = 21,
+                    Name = "AEG LWR7796UD6",
+                    Brand = "AEG",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 1249,
+                    ImagePath = "/images/devices/wasmachines/aeg-lwr7796ud6.png"
+                },
+
+                new Device
+                {
+                    Id = 22,
+                    Name = "Samsung Bespoke Autodose 5000 serie WW11BB534AABS2",
+                    Brand = "Samsung",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 749,
+                    ImagePath = "/images/devices/wasmachines/samsung-bespoke-autodose-5000-serie-ww11bb534aabs2.png"
+                },
             };
 
             foreach (var device in devices)
