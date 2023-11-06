@@ -142,8 +142,60 @@ namespace Duurzame_Consumentkeuzes.Data
                     ImagePath = "/images/devices/wasmachines/beko-wtv8711bc1.png"
                 },
 
+                new Device
+                {
+                    Id = 11,
+                    Name = "Bosch Serie | 6 KGN39AIAT",
+                    Brand = "Bosch",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 41.60M,
+                    ImagePath = "/images/devices/koelkasten/bosch-serie-6-kgn39aiat.png"
+                },
 
+                new Device
+                {
+                    Id = 12,
+                    Name = "Siemens KG39E8XBA",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 2,
+                    Price = 47.60M,
+                    ImagePath = "/images/devices/koelkasten/siemens-kg39e8xba.png"
+                },
 
+                new Device
+                {
+                    Id = 13,
+                    Name = "LG GBP62PZNBC",
+                    Brand = "LG",
+                    Type = "Koelkast",
+                    EnergyLabelId = 2,
+                    Price = 1009,
+                    ImagePath = "/images/devices/koelkasten/lg-gbp62pznbc.png"
+                },
+
+                new Device
+                {
+                    Id = 14,
+                    Name = "LG GBB92STBAP",
+                    Brand = "LG",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 1378,
+                    ImagePath = "/images/devices/koelkasten/lg-gbb92stbap.png"
+                },
+
+                new Device
+                {
+                    Id = 15,
+                    Name = "Siemens IQ500 KG39NAIAT",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 1399,
+                    ImagePath = "/images/devices/koelkasten/siemens-iq500-kg39naiat.png"
+                },
             };
 
             foreach (var device in devices)
