@@ -27,7 +27,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
         public async Task<IActionResult> Index(int? energyLabelId, bool showAll)
         {
             var currentUser = await userManager.GetUserAsync(User);
-            IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);
+            IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);   
 
             if (showAll == true)
             {
@@ -43,6 +43,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
             if (currentUser.Budget.HasValue)
             {
+                ViewBag.UserBudget = currentUser.Budget;
                 query = query.Where(d => d.Price <= currentUser.Budget);
             }
 
