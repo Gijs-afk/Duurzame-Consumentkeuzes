@@ -5,6 +5,31 @@
 }
 
 <h1>Apparaten</h1>
+
+<form asp-controller="Devices" asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="energyLabelId">Minimaal Energy Label:</label>
+        <select id="energyLabelId" name="energyLabelId">
+            <option value="">Any</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+            <option value="5">E</option>
+            <option value="6">F</option>
+            <option value="7">G</option>
+            
+        </select>
+    </div>
+
+    <label for="showAll">Laat alle apparaten zien:</label>
+    <input type="checkbox" id="showAll" name="showAll" value="true" />
+
+    <button type="submit">Apply Filters</button>
+
+
+</form>
+
 <table>
     <tr>
         @foreach (var item in Model)
@@ -47,7 +72,7 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                @Html.DisplayNameFor(model => model.Brand) 
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Type)
