@@ -22,13 +22,16 @@
         </select>
     </div>
 
-    <label for="showAll">Laat alle apparaten zien:</label>
-    <input type="checkbox" id="showAll" name="showAll" value="true" />
+    <p>Je budget is: @ViewBag.UserBudget</p>
 
     <button type="submit">Apply Filters</button>
-
-
 </form>
+
+<form asp-controller="Devices" asp-action="Index" method="get">
+    <input type="hidden" name="showAll" value="true" />
+    <button type="submit">Laat alle apparaten zien</button>
+</form>
+
 
 <table>
     <tr>
