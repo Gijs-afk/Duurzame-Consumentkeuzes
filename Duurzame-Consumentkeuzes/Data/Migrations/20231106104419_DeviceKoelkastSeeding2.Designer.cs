@@ -4,6 +4,7 @@ using Duurzame_Consumentkeuzes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Duurzame_Consumentkeuzes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231106104419_DeviceKoelkastSeeding2")]
+    partial class DeviceKoelkastSeeding2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,66 +127,66 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         {
                             Id = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f75952f9-297e-40e3-97c1-27a937da38ed",
+                            ConcurrencyStamp = "e835a53e-1fe4-4471-9dd9-8ee6ecf7aadb",
                             Email = "admin@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAED2RQggumK9fWHiGjYYl/uVKtmeuBKmHP+e20W5LIr959r3t/5YGxysoPrFjegFflA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPgia2Rt5PgNeFCSlW9Wsh40pn9XqkKGVWDI5ktG87Dbz99kg0TM1p9HLhmucAM18w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c4acf121-613c-4949-9ecf-94c300b97ab5",
+                            SecurityStamp = "5afcaa8f-6fad-4845-b795-652249fe0a2f",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
                         new
                         {
-                            Id = "db0f2ef1-0a19-4dc8-955e-c7069a7855ed",
+                            Id = "d92d9a75-9fc1-489a-b644-1b41dd46c0b6",
                             AccessFailedCount = 0,
                             Budget = 450m,
-                            ConcurrencyStamp = "b43e8e95-26d3-4a95-8f2f-2d536b68a562",
+                            ConcurrencyStamp = "7c3b11e0-b8ea-486f-be77-f979d09aac0e",
                             Email = "bruce@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "BRUCE@EXAMPLE.COM",
                             NormalizedUserName = "BRUCE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKmRXBgCJjDk1/BiveF40X3LsCXrtc79pmF/RubgZhFREBkaFietwAhg6lldL7ySng==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDvtYMa4QeTNcf18C6X6Wm/aPhs8HKZTjCTML/gwksZC4vLd7ofSkgNtkQ9TLN3/jw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b5e34192-4066-4e47-8409-567637d8b545",
+                            SecurityStamp = "9abf97e7-07ae-4f23-94a8-bcef88d0025a",
                             TwoFactorEnabled = false,
                             UserName = "bruce@example.com"
                         },
                         new
                         {
-                            Id = "d1ee95f0-a8bf-4d2b-a371-1cb9dbf84a0b",
+                            Id = "724d24c8-22d8-4d4a-b864-7db96959ffd6",
                             AccessFailedCount = 0,
                             Budget = 500m,
-                            ConcurrencyStamp = "4bdc4943-1475-4ac7-be7f-cb02581ded67",
+                            ConcurrencyStamp = "57357040-8953-44c4-9eaf-8d9714c6a52e",
                             Email = "gijs@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "GIJS@EXAMPLE.COM",
                             NormalizedUserName = "GIJS@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENpEJ0QvCFzBVogYFFwCzqFJhlzECKjDTlvlfdWO1gUv8DYa0r8yrRlrVqAKOPUpcQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECCryw3C7VInmouVS7Lp3C4tKceW8B4Ipn8UzFYm96CZjPG9UhBvTKpseghVzZfitA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8ff78077-6ef1-4dde-8e65-edc6df02e58d",
+                            SecurityStamp = "ecfaf3cc-b068-42bc-b66f-7b2e1fb8f6bf",
                             TwoFactorEnabled = false,
                             UserName = "gijs@example.com"
                         },
                         new
                         {
-                            Id = "ca52d617-4bcd-4429-897a-89f43786d0d3",
+                            Id = "7f556252-e112-4ef3-bfd5-28a3af774bce",
                             AccessFailedCount = 0,
                             Budget = 650m,
-                            ConcurrencyStamp = "de432db3-74de-450e-b933-62d3e5d96638",
+                            ConcurrencyStamp = "85984fa8-2c60-48a1-bf65-2ac0f08d3d09",
                             Email = "rick@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "RICK@EXAMPLE.COM",
                             NormalizedUserName = "RICK@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAQjPxRi3sTk2M62ssrgnlHCdxPdV5ovyOrjZ3C8YX/agd9HSYbSgSyDy4kdeoEy/w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEElC+9SLvgKtXscPH3BiwLIAU9XQIL4pNapVaQzbuiyHCHnSiR3bC13lfAsA13TkA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a13164b9-88ac-42ae-9c2f-c7db464b2abf",
+                            SecurityStamp = "d40582e5-b617-4a50-91fd-f81d8d485671",
                             TwoFactorEnabled = false,
                             UserName = "rick@example.com"
                         });
@@ -424,26 +427,6 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Name = "Bosch KSV33VLEP",
                             Price = 719m,
                             Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Brand = "AEG",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/aeg-lwr7796ud6.png",
-                            Name = "AEG LWR7796UD6",
-                            Price = 1249m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Brand = "Samsung",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/samsung-bespoke-autodose-5000-serie-ww11bb534aabs2.png",
-                            Name = "Samsung Bespoke Autodose 5000 serie WW11BB534AABS2",
-                            Price = 749m,
-                            Type = "Wasmachine"
                         });
                 });
 

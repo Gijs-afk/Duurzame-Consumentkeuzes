@@ -5,6 +5,8 @@
 }
 
 <h1>Apparaten</h1>
+<p>Op deze pagina vindt u een door ons aanbevolen assortiment aan huishoudelijke apparaten!</p>
+<br />
 
 <form asp-controller="Devices" asp-action="Index" method="get">
     <div class="form-group">
@@ -32,94 +34,65 @@
     <button type="submit">Laat alle apparaten zien</button>
 </form>
 
-
-<table>
-    <tr>
-        @foreach (var item in Model)
+@{
+    List<string> types = new List<string>();
+    foreach (var item in Model)
+    {
+        if (!types.Contains(item.Type))
         {
-            <td class="deviceItem">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="@item.ImagePath" class="deviceImage">
-                        </td>
-                        <td>                          
-                            @item.Name <br />
-                            Energieklasse: <img src="@item.EnergyLabel.ImagePath"> <br />
-                            Prijs: €@item.Price                           
-                        </td>
-                    </tr>
-                </table>                             
-            </td>
+            types.Add(item.Type);
         }
-    </tr>
-</table>
+    }
+    foreach (string type in types)
+    {
+        <h2>@type</h2>
+        
+        List<Device> devices = new List<Device>();
+        foreach (var item in Model)
+        {
+            if (item.Type == type)
+            {
+                devices.Add(item);
+            }
+        }
+        <p>Aantal: @devices.Count()</p>
 
+        <table>
+            @{
+                int rowCount = (int)Math.Ceiling(((double)devices.Count() / 5));
+                for (int r = rowCount; r > 0; r--)
+                {
+                    <tr>
+                        @for (int i = 0; i < 5; i++)
+                        {
+                            @if (devices.Count == 0)
+                            {
+                                <td></td>
+                            }
 
-
-
-
-
-
-
-@*
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand) 
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BuildDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagePath)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BuildDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+                            else
+                            {
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img src="@devices[devices.Count() - 1].ImagePath" class="deviceImage">
+                                            </td>
+                                            <td>
+                                                @devices[devices.Count() - 1].Name <br />
+                                                Energieklasse: <img src="@devices[devices.Count() - 1].EnergyLabel.ImagePath"> <br />
+                                                Prijs: €@devices[devices.Count() - 1].Price
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                devices.RemoveAt(devices.Count() - 1);
+                            }                                                                          
+                        }                        
+                    </tr>
+                }
+            }                          
+        </table>
+        <br />
+    }
 }
-    </tbody>
-</table>
-*@

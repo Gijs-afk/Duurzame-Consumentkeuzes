@@ -40,7 +40,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 599,
-                    ImagePath = "/images/devices/haier-hw90-b14959u1.png",
+                    ImagePath = "/images/devices/wasmachines/haier-hw90-b14959u1.png",
                 },
 
                 new Device
@@ -51,7 +51,7 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 649,
-                    ImagePath = "/images/devices/samsung-ww90t534aaw.png"
+                    ImagePath = "/images/devices/wasmachines/samsung-ww90t534aaw.png"
                 },
 
                 new Device
@@ -62,9 +62,219 @@ namespace Duurzame_Consumentkeuzes.Data
                     Type = "Wasmachine",
                     EnergyLabelId = 1,
                     Price = 699,
-                    ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png"
+                    ImagePath = "/images/devices/wasmachines/bosch-serie-4-wgg04409nl.png"
+                },
+
+                new Device
+                {
+                    Id = 4,
+                    Name = "AEG LR6BERLIN",
+                    Brand = "AEG",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 649,
+                    ImagePath = "/images/devices/wasmachines/aeg-lr6berlin.png"
+                },
+
+                new Device
+                {
+                    Id = 5,
+                    Name = "Siemens IQ700 WG56B2A5NL",
+                    Brand = "Siemens",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 1099,
+                    ImagePath = "/images/devices/wasmachines/siemens-iq700-wg56b2a5nl.png"
+                },
+
+                new Device
+                {
+                    Id = 6,
+                    Name = "Bosch Serie | 6 WAU28P95NL",
+                    Brand = "Bosch",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 875,
+                    ImagePath = "/images/devices/wasmachines/bosch-serie-6-wau28p95nl.png"
+                },
+
+                new Device
+                {
+                    Id = 7,
+                    Name = "Siemens IQ300 WM14N297NL",
+                    Brand = "Siemens",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 779,
+                    ImagePath = "/images/devices/wasmachines/siemens-iq300-wm14n297nl.png"
+                },
+                
+                new Device
+                {
+                    Id = 8,
+                    Name = "Beko WTV8712BLW1",
+                    Brand = "Beko",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 3,
+                    Price = 399,
+                    ImagePath = "/images/devices/wasmachines/beko-wtv8712blw1.png"
+                },
+
+                new Device
+                {
+                    Id = 9,
+                    Name = "Whirlpool FFB 9458 WV BE",
+                    Brand = "Whirlpool",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 2,
+                    Price = 403,
+                    ImagePath = "/images/devices/wasmachines/whirlpool-ffb-9458-wv-be.png"
+                },
+
+                new Device
+                {
+                    Id = 10,
+                    Name = "Beko WTV8711BC1",
+                    Brand = "Beko",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 3,
+                    Price = 429,
+                    ImagePath = "/images/devices/wasmachines/beko-wtv8711bc1.png"
+                },
+
+                new Device
+                {
+                    Id = 11,
+                    Name = "Bosch Serie | 6 KGN39AIAT",
+                    Brand = "Bosch",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 1249,
+                    ImagePath = "/images/devices/koelkasten/bosch-serie-6-kgn39aiat.png"
+                },
+
+                new Device
+                {
+                    Id = 12,
+                    Name = "Siemens KG39E8XBA",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 2,
+                    Price = 839,
+                    ImagePath = "/images/devices/koelkasten/siemens-kg39e8xba.png"
+                },
+
+                new Device
+                {
+                    Id = 13,
+                    Name = "LG GBP62PZNBC",
+                    Brand = "LG",
+                    Type = "Koelkast",
+                    EnergyLabelId = 2,
+                    Price = 1009,
+                    ImagePath = "/images/devices/koelkasten/lg-gbp62pznbc.png"
+                },
+
+                new Device
+                {
+                    Id = 14,
+                    Name = "LG GBB92STBAP",
+                    Brand = "LG",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 1378,
+                    ImagePath = "/images/devices/koelkasten/lg-gbb92stbap.png"
+                },
+
+                new Device
+                {
+                    Id = 15,
+                    Name = "Siemens IQ500 KG39NAIAT",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 1399,
+                    ImagePath = "/images/devices/koelkasten/siemens-iq500-kg39naiat.png"
+                },
+
+                new Device
+                {
+                    Id = 16,
+                    Name = "Etna KKS4088",
+                    Brand = "Etna",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 348,
+                    ImagePath = "/images/devices/koelkasten/etna-kks4088.png"
+                },
+
+                new Device
+                {
+                    Id = 17,
+                    Name = "Siemens KU15RAFF0",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 576,
+                    ImagePath = "/images/devices/koelkasten/siemens-ku15raff0.png"
+                },
+
+                new Device
+                {
+                    Id = 18,
+                    Name = "Siemens KI51FADE0",
+                    Brand = "Siemens",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 893.36M,
+                    ImagePath = "/images/devices/koelkasten/siemens-ki51fade0.png"
+                },
+
+                new Device
+                {
+                    Id = 19,
+                    Name = "Etna KKD4122 ",
+                    Brand = "Etna",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 499,
+                    ImagePath = "/images/devices/koelkasten/etna-kkd4122.png"
+                },
+
+                new Device
+                {
+                    Id = 20,
+                    Name = "Bosch KSV33VLEP",
+                    Brand = "Bosch",
+                    Type = "Koelkast",
+                    EnergyLabelId = 1,
+                    Price = 719,
+                    ImagePath = "/images/devices/koelkasten/bosch-ksv33vlep.png"
+                },
+
+                new Device
+                {
+                    Id = 21,
+                    Name = "AEG LWR7796UD6",
+                    Brand = "AEG",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 1249,
+                    ImagePath = "/images/devices/wasmachines/aeg-lwr7796ud6.png"
+                },
+
+                new Device
+                {
+                    Id = 22,
+                    Name = "Samsung Bespoke Autodose 5000 serie WW11BB534AABS2",
+                    Brand = "Samsung",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 1,
+                    Price = 749,
+                    ImagePath = "/images/devices/wasmachines/samsung-bespoke-autodose-5000-serie-ww11bb534aabs2.png"
                 },
             };
+
             foreach (var device in devices)
             {
                 modelBuilder.Entity<Device>().HasData(device);

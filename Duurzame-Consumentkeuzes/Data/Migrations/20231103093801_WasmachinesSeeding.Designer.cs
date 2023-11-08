@@ -4,6 +4,7 @@ using Duurzame_Consumentkeuzes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Duurzame_Consumentkeuzes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231103093801_WasmachinesSeeding")]
+    partial class WasmachinesSeeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,66 +127,66 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                         {
                             Id = "372725a0-0897-4dd1-a77a-0f9cce9ca7ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f75952f9-297e-40e3-97c1-27a937da38ed",
+                            ConcurrencyStamp = "10fc573e-3ecb-4fca-a0cd-bdfe2e3cf67c",
                             Email = "admin@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAED2RQggumK9fWHiGjYYl/uVKtmeuBKmHP+e20W5LIr959r3t/5YGxysoPrFjegFflA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIDd+sp5DNPXmAytvQIM2xiyy0ya4vVJcTQsXxLAZC5BMfuKl6f/fPArQDVdvYHnSA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c4acf121-613c-4949-9ecf-94c300b97ab5",
+                            SecurityStamp = "f01ce7f7-38c2-4bca-8c62-5a9c79d592d3",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
                         },
                         new
                         {
-                            Id = "db0f2ef1-0a19-4dc8-955e-c7069a7855ed",
+                            Id = "43bd69a6-0cfa-4e31-98b7-6e302af4a071",
                             AccessFailedCount = 0,
                             Budget = 450m,
-                            ConcurrencyStamp = "b43e8e95-26d3-4a95-8f2f-2d536b68a562",
+                            ConcurrencyStamp = "30708a3b-150c-4400-b91e-35599a45ed40",
                             Email = "bruce@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "BRUCE@EXAMPLE.COM",
                             NormalizedUserName = "BRUCE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKmRXBgCJjDk1/BiveF40X3LsCXrtc79pmF/RubgZhFREBkaFietwAhg6lldL7ySng==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEP4k3sns5xBZq70OUdKBKAb+/aCreHDJDNzswy52vb5NamqiqwUyLl/9scmZ+POzrQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b5e34192-4066-4e47-8409-567637d8b545",
+                            SecurityStamp = "b8c5c99c-0fc0-4ddc-a0fd-f26f70bfaa47",
                             TwoFactorEnabled = false,
                             UserName = "bruce@example.com"
                         },
                         new
                         {
-                            Id = "d1ee95f0-a8bf-4d2b-a371-1cb9dbf84a0b",
+                            Id = "12755b00-505b-47c3-9332-8fe19a0d314a",
                             AccessFailedCount = 0,
                             Budget = 500m,
-                            ConcurrencyStamp = "4bdc4943-1475-4ac7-be7f-cb02581ded67",
+                            ConcurrencyStamp = "fa217d44-50ea-4411-84f3-09447bd83b18",
                             Email = "gijs@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "GIJS@EXAMPLE.COM",
                             NormalizedUserName = "GIJS@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENpEJ0QvCFzBVogYFFwCzqFJhlzECKjDTlvlfdWO1gUv8DYa0r8yrRlrVqAKOPUpcQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ7V47Pu2983t2qjcUFVIh1jKXl1rUGcKzRmYsH9QeGUU7loYx+G39ajO4r+TB9mKg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8ff78077-6ef1-4dde-8e65-edc6df02e58d",
+                            SecurityStamp = "02aa0e7d-740b-4f12-894e-4d5024d6c431",
                             TwoFactorEnabled = false,
                             UserName = "gijs@example.com"
                         },
                         new
                         {
-                            Id = "ca52d617-4bcd-4429-897a-89f43786d0d3",
+                            Id = "e0a745ac-2deb-4a12-a136-0d72c5a42b0d",
                             AccessFailedCount = 0,
                             Budget = 650m,
-                            ConcurrencyStamp = "de432db3-74de-450e-b933-62d3e5d96638",
+                            ConcurrencyStamp = "f3664782-16c7-4f11-ac0a-72aea5c8a789",
                             Email = "rick@example.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "RICK@EXAMPLE.COM",
                             NormalizedUserName = "RICK@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAQjPxRi3sTk2M62ssrgnlHCdxPdV5ovyOrjZ3C8YX/agd9HSYbSgSyDy4kdeoEy/w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAQcN5pObxqw9YT7HJ8+W5LoDphFKMzFdVqBjqcICvKX9/pMhp00Q3f1EoabWyPaMw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a13164b9-88ac-42ae-9c2f-c7db464b2abf",
+                            SecurityStamp = "199e6ba1-e1ce-4487-a1bc-f6372645e447",
                             TwoFactorEnabled = false,
                             UserName = "rick@example.com"
                         });
@@ -230,7 +233,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 1,
                             Brand = "Haier",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/haier-hw90-b14959u1.png",
+                            ImagePath = "/images/devices/haier-hw90-b14959u1.png",
                             Name = "Haier HW90 B14959U1",
                             Price = 599m,
                             Type = "Wasmachine"
@@ -240,7 +243,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 2,
                             Brand = "Samsung",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/samsung-ww90t534aaw.png",
+                            ImagePath = "/images/devices/samsung-ww90t534aaw.png",
                             Name = "Samsung WW90T534AAW",
                             Price = 649m,
                             Type = "Wasmachine"
@@ -250,7 +253,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 3,
                             Brand = "Bosch",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/bosch-serie-4-wgg04409nl.png",
+                            ImagePath = "/images/devices/bosch-serie-4-wgg04409nl.png",
                             Name = "Bosch Serie | 4 WGG04409NL",
                             Price = 699m,
                             Type = "Wasmachine"
@@ -260,7 +263,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 4,
                             Brand = "AEG",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/aeg-lr6berlin.png",
+                            ImagePath = "/images/devices/aeg-lr6berlin.png",
                             Name = "AEG LR6BERLIN",
                             Price = 649m,
                             Type = "Wasmachine"
@@ -270,7 +273,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 5,
                             Brand = "Siemens",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/siemens-iq700-wg56b2a5nl.png",
+                            ImagePath = "/images/devices/siemens-iq700-wg56b2a5nl.png",
                             Name = "Siemens IQ700 WG56B2A5NL",
                             Price = 1099m,
                             Type = "Wasmachine"
@@ -280,7 +283,7 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 6,
                             Brand = "Bosch",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/bosch-serie-6-wau28p95nl.png",
+                            ImagePath = "/images/devices/bosch-serie-6-wau28p95nl.png",
                             Name = "Bosch Serie | 6 WAU28P95NL",
                             Price = 875m,
                             Type = "Wasmachine"
@@ -290,159 +293,9 @@ namespace Duurzame_Consumentkeuzes.Data.Migrations
                             Id = 7,
                             Brand = "Siemens",
                             EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/siemens-iq300-wm14n297nl.png",
+                            ImagePath = "/images/devices/siemens-iq300-wm14n297nl.png",
                             Name = "Siemens IQ300 WM14N297NL",
                             Price = 779m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Brand = "Beko",
-                            EnergyLabelId = 3,
-                            ImagePath = "/images/devices/wasmachines/beko-wtv8712blw1.png",
-                            Name = "Beko WTV8712BLW1",
-                            Price = 399m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Brand = "Whirlpool",
-                            EnergyLabelId = 2,
-                            ImagePath = "/images/devices/wasmachines/whirlpool-ffb-9458-wv-be.png",
-                            Name = "Whirlpool FFB 9458 WV BE",
-                            Price = 403m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Brand = "Beko",
-                            EnergyLabelId = 3,
-                            ImagePath = "/images/devices/wasmachines/beko-wtv8711bc1.png",
-                            Name = "Beko WTV8711BC1",
-                            Price = 429m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Brand = "Bosch",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/bosch-serie-6-kgn39aiat.png",
-                            Name = "Bosch Serie | 6 KGN39AIAT",
-                            Price = 1249m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Brand = "Siemens",
-                            EnergyLabelId = 2,
-                            ImagePath = "/images/devices/koelkasten/siemens-kg39e8xba.png",
-                            Name = "Siemens KG39E8XBA",
-                            Price = 839m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Brand = "LG",
-                            EnergyLabelId = 2,
-                            ImagePath = "/images/devices/koelkasten/lg-gbp62pznbc.png",
-                            Name = "LG GBP62PZNBC",
-                            Price = 1009m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Brand = "LG",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/lg-gbb92stbap.png",
-                            Name = "LG GBB92STBAP",
-                            Price = 1378m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Brand = "Siemens",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/siemens-iq500-kg39naiat.png",
-                            Name = "Siemens IQ500 KG39NAIAT",
-                            Price = 1399m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Brand = "Etna",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/etna-kks4088.png",
-                            Name = "Etna KKS4088",
-                            Price = 348m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Brand = "Siemens",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/siemens-ku15raff0.png",
-                            Name = "Siemens KU15RAFF0",
-                            Price = 576m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Brand = "Siemens",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/siemens-ki51fade0.png",
-                            Name = "Siemens KI51FADE0",
-                            Price = 893.36m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Brand = "Etna",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/etna-kkd4122.png",
-                            Name = "Etna KKD4122 ",
-                            Price = 499m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Brand = "Bosch",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/koelkasten/bosch-ksv33vlep.png",
-                            Name = "Bosch KSV33VLEP",
-                            Price = 719m,
-                            Type = "Koelkast"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Brand = "AEG",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/aeg-lwr7796ud6.png",
-                            Name = "AEG LWR7796UD6",
-                            Price = 1249m,
-                            Type = "Wasmachine"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Brand = "Samsung",
-                            EnergyLabelId = 1,
-                            ImagePath = "/images/devices/wasmachines/samsung-bespoke-autodose-5000-serie-ww11bb534aabs2.png",
-                            Name = "Samsung Bespoke Autodose 5000 serie WW11BB534AABS2",
-                            Price = 749m,
                             Type = "Wasmachine"
                         });
                 });
