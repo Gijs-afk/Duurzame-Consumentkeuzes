@@ -273,6 +273,28 @@ namespace Duurzame_Consumentkeuzes.Data
                     Price = 749,
                     ImagePath = "/images/devices/wasmachines/samsung-bespoke-autodose-5000-serie-ww11bb534aabs2.png"
                 },
+
+                new Device
+                {
+                    Id = 23,
+                    Name = "Bosch WNA14420NL",
+                    Brand = "Bosch",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 5,
+                    Price = 898,
+                    ImagePath = "/images/devices/wasmachines/bosch-wna14420nl.png"
+                },
+
+                new Device
+                {
+                    Id = 24,
+                    Name = "AEG L6TB62K",
+                    Brand = "AEG",
+                    Type = "Wasmachine",
+                    EnergyLabelId = 6,
+                    Price = 599,
+                    ImagePath = "/images/devices/wasmachines/aeg-l6tb62k.png"
+                },
             };
 
             foreach (var device in devices)
