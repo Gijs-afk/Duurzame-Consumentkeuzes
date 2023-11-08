@@ -7,26 +7,48 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Duurzame_Consumentkeuzes.Data;
 using Duurzame_Consumentkeuzes.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Duurzame_Consumentkeuzes.Controllers
 {
     public class DevicesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<Customer> userManager;
 
-        public DevicesController(ApplicationDbContext context)
+        public DevicesController(ApplicationDbContext context, UserManager<Customer> userManager)
         {
             _context = context;
+            this.userManager = userManager;
         }
 
-        // GET: Devices
-        public async Task<IActionResult> Index()
+        [Authorize]
+        public async Task<IActionResult> Index(int? energyLabelId, bool showAll)
         {
-              return _context.Devices != null ? 
-                          View(await _context.Devices
-                          .Include(d => d.EnergyLabel)
-                          .ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Devices'  is null.");
+            var currentUser = await userManager.GetUserAsync(User);
+            IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);   
+
+            if (showAll == true)
+            {
+                var allDevices = await query.ToListAsync();
+                return View(allDevices);
+            }
+
+
+            if (energyLabelId.HasValue)
+            {
+                query = query.Where(d => d.EnergyLabelId <= energyLabelId);
+            }
+
+            if (currentUser.Budget.HasValue)
+            {
+                ViewBag.UserBudget = currentUser.Budget;
+                query = query.Where(d => d.Price <= currentUser.Budget);
+            }
+
+            var filteredDevices = await query.ToListAsync();
+            return View(filteredDevices);
         }
 
         // GET: Devices/Details/5

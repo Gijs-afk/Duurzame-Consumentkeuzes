@@ -8,6 +8,32 @@
 <p>Op deze pagina vindt u een door ons aanbevolen assortiment aan huishoudelijke apparaten!</p>
 <br />
 
+<form asp-controller="Devices" asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="energyLabelId">Minimaal Energy Label:</label>
+        <select id="energyLabelId" name="energyLabelId">
+            <option value="">Any</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+            <option value="5">E</option>
+            <option value="6">F</option>
+            <option value="7">G</option>
+            
+        </select>
+    </div>
+
+    <p>Je budget is: @ViewBag.UserBudget</p>
+
+    <button type="submit">Apply Filters</button>
+</form>
+
+<form asp-controller="Devices" asp-action="Index" method="get">
+    <input type="hidden" name="showAll" value="true" />
+    <button type="submit">Laat alle apparaten zien</button>
+</form>
+
 @{
     List<string> types = new List<string>();
     foreach (var item in Model)
@@ -70,27 +96,3 @@
         <br />
     }
 }
-
-@*
-<table>
-    <tr>
-        @foreach (var item in Model)
-        {
-            <td class="deviceItem">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="@item.ImagePath" class="deviceImage">
-                        </td>
-                        <td>                          
-                            @item.Name <br />
-                            Energieklasse: <img src="@item.EnergyLabel.ImagePath"> <br />
-                            Prijs: €@item.Price                           
-                        </td>
-                    </tr>
-                </table>                             
-            </td>
-        }
-    </tr>
-</table>
-*@
