@@ -24,10 +24,16 @@ namespace Duurzame_Consumentkeuzes.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> Index(int? energyLabelId, bool showAll)
+        public async Task<IActionResult> Index(int? energyLabelId, bool showAll, string? brand, string? type)
         {
             var currentUser = await userManager.GetUserAsync(User);
-            IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);   
+            IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);
+
+            var uniqueBrands = _context.Devices.Select(d => d.Brand).Distinct().ToList();
+            var uniqueType = _context.Devices.Select(d => d.Type).Distinct().ToList();
+            ViewBag.Brands = uniqueBrands;
+            ViewBag.Type = uniqueType;
+
 
             if (showAll == true)
             {
@@ -39,6 +45,15 @@ namespace Duurzame_Consumentkeuzes.Controllers
             if (energyLabelId.HasValue)
             {
                 query = query.Where(d => d.EnergyLabelId <= energyLabelId);
+            }
+
+            if (!string.IsNullOrEmpty(brand))
+            {
+                query = query.Where(d => d.Brand == brand);
+            }
+            if (!string.IsNullOrEmpty(type))
+            {
+                query = query.Where(d => d.Type == type);
             }
 
             if (currentUser.Budget.HasValue)

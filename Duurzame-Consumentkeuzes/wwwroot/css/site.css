@@ -107,4 +107,41 @@ label, input, textarea {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Voeg een lichte schaduw toe bij hover */
     }
 
+.filterSection {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    .filterSection label,
+    .filterSection select {
+        margin-right: 10px;
+    }
+
+    .filterSection button {
+        padding: 5px 10px;
+        margin-top: 2px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+
+.BrandFilter {
+    margin-bottom: 20px;
+}
+
+    .BrandFilter label,
+    .BrandFilter button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .BrandFilter button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 
