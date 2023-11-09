@@ -28,8 +28,9 @@ body {
 
 .deviceItem {
     border: 2px solid #808080;
-    width: 400px;
+    width: 600px;
     height: 125px;
+    margin: 20px;
 }
 
 .custom-btn {
