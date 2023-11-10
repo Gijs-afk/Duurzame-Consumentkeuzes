@@ -25,6 +25,7 @@ namespace Duurzame_Consumentkeuzes.Controllers
 
         [Authorize]
         public async Task<IActionResult> Index(int? energyLabelId, bool showAll, string? brand, string? type)
+
         {
             var currentUser = await userManager.GetUserAsync(User);
             IQueryable<Device> query = _context.Devices.Include(d => d.EnergyLabel);
@@ -35,12 +36,12 @@ namespace Duurzame_Consumentkeuzes.Controllers
             ViewBag.Type = uniqueType;
 
 
+
             if (showAll == true)
             {
                 var allDevices = await query.ToListAsync();
                 return View(allDevices);
             }
-
 
             if (energyLabelId.HasValue)
             {
