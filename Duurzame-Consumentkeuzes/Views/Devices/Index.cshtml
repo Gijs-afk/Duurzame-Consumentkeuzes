@@ -55,7 +55,7 @@
 
 <form asp-controller="Devices" asp-action="Index" method="get">
     <input type="hidden" name="showAll" value="true" />
-    <button type="submit">Laat alle apparaten zien</button>
+    <button class="btn btn-primary custom-btn pd-top" type="submit">Laat alle apparaten zien</button>
 </form>
 
 
@@ -83,7 +83,7 @@
         }
         <p>Aantal: @devices.Count()</p>
 
-        <table>
+        <table*>
             @{
                 int rowCount = (int)Math.Ceiling(((double)devices.Count() / 5));
                 for (int r = rowCount; r > 0; r--)
@@ -118,7 +118,7 @@
                     </tr>
                 }
             }                          
-        </table>
+        </table*>
         <br />
     }
 }
