@@ -8,7 +8,7 @@
 <p>Op deze pagina vindt u een door ons aanbevolen assortiment aan huishoudelijke apparaten!</p>
 <br />
 
-<form asp-controller="Devices" asp-action="Index" method="get">
+<form asp-controller="Devices" asp-action="Index" method="get" class="filterSection">
     <div class="form-group">
         <label for="energyLabelId">Minimaal Energy Label:</label>
         <select id="energyLabelId" name="energyLabelId">
@@ -20,19 +20,45 @@
             <option value="5">E</option>
             <option value="6">F</option>
             <option value="7">G</option>
-            
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="type">Filter op type apparaat:</label>
+        <select id="type" name="type">
+            <option value="">alle</option>
+            @foreach (var deviceType in ViewBag.Type)
+            {
+                <option value="@deviceType">@deviceType</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="brand">Filter op merk:</label>
+        <select id="brand" name="brand">
+            <option value="">alle</option>
+            @foreach (var brand in ViewBag.Brands)
+            {
+                <option value="@brand">@brand</option>
+            }
         </select>
     </div>
 
     <p>Je budget is: @ViewBag.UserBudget</p>
 
-    <button type="submit">Apply Filters</button>
+
+
+    <button class="btn btn-primary custom-btn" type="submit">Apply Filters</button>
 </form>
+
 
 <form asp-controller="Devices" asp-action="Index" method="get">
     <input type="hidden" name="showAll" value="true" />
-    <button type="submit">Laat alle apparaten zien</button>
+    <button class="btn btn-primary custom-btn pd-top" type="submit">Laat alle apparaten zien</button>
 </form>
+
+
 
 @{
     List<string> types = new List<string>();
@@ -57,7 +83,7 @@
         }
         <p>Aantal: @devices.Count()</p>
 
-        <table>
+        <table*>
             @{
                 int rowCount = (int)Math.Ceiling(((double)devices.Count() / 5));
                 for (int r = rowCount; r > 0; r--)
@@ -92,7 +118,7 @@
                     </tr>
                 }
             }                          
-        </table>
+        </table*>
         <br />
     }
 }
