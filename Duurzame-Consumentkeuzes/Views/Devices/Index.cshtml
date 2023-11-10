@@ -55,12 +55,12 @@
 
 <form asp-controller="Devices" asp-action="Index" method="get">
     <input type="hidden" name="showAll" value="true" />
-    <button class="btn btn-primary custom-btn pd-top" type="submit">Laat alle apparaten zien</button>
+    <button class="btn btn-primary custom-btn" type="submit">Laat alle apparaten zien</button>
 </form>
 
 
 
-@{
+@* @{
     List<string> types = new List<string>();
     foreach (var item in Model)
     {
@@ -119,6 +119,45 @@
                 }
             }                          
         </table*>
+        <br />
+    }
+} *@
+
+@{
+    List<string> types = new List<string>();
+    foreach (var item in Model)
+    {
+        if (!types.Contains(item.Type))
+        {
+            types.Add(item.Type);
+        }
+    }
+    foreach (string type in types)
+    {
+        <h2>@type</h2>
+
+        List<Device> devices = new List<Device>();
+        foreach (var item in Model)
+        {
+            if (item.Type == type)
+            {
+                devices.Add(item);
+            }
+        }
+        <p>Aantal: @devices.Count()</p>
+
+        <div style="display: flex; flex-wrap: wrap;">
+            
+            @for (int i = 0; i < devices.Count; i++)
+            {
+                <div class="device-container">
+                    <img src="@devices[i].ImagePath" class="deviceImage">
+                    <p>@devices[i].Name</p>
+                    <p>Energieklasse: <img src="@devices[i].EnergyLabel.ImagePath"></p>
+                    <p>Prijs: €@devices[i].Price</p>
+                </div>
+            }
+        </div>
         <br />
     }
 }
